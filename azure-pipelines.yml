@@ -24,5 +24,3 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
-- task: PublishBuildArtifacts@1
-
