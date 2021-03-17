@@ -1,5 +1,14 @@
 <?php
-    $array = array("cor" => "amarelo", "Ano" => 2015);
+    require_once 'connection.php';
 
-    echo json_encode($array);
+    $sql = "SELECT * FROM TB_EXAMPLE";
+
+    $statement = $conn->prepare($sql);
+    $statement->execute();
+    
+    $res = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    $json = json_encode($res,JSON_UNESCAPED_UNICODE);
+
+    echo $json;
 ?>
