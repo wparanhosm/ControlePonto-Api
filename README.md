@@ -17,7 +17,7 @@ O projeto consiste em uma aplicação de controle de ponto, onde o usuário, atr
  
  >Não foi identificada a necessidade de se trabalhar com um framework SPA para essa aplicação
 
-######Apresentação
+###### Apresentação
 As telas que irão compor o site são:
 
 - Cadastro (Nome, e-mail, senha)
@@ -38,18 +38,18 @@ A solução mobile será desenvolvida em Flutter e contará com as seguintes fun
 
 >Aplicativo não poderá editar nem deletar informações 
 
-#####Infraestrutura:
-######Api 
+##### Infraestrutura:
+###### Api 
 - Desenvolvida em php, com endpoints de crud (cadastro do ponto, login);
 
-######Banco de dados: 
+###### Banco de dados: 
 - Desenvolvimento das tabelas em MySQL; 
 - Acessado através da API;
 
 >O campo de senha será criptofado por padrão
 
 
-######Deploy:
+###### Deploy:
 
   >Site: Github pages 
   Api: hospedagem gratuita no WebhostApp 
@@ -57,4 +57,4 @@ A solução mobile será desenvolvida em Flutter e contará com as seguintes fun
 
 
 
-![](https://img.shields.io/github/stars/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/forks/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/tag/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/release/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/issues/tangsan06/ControlePonto-Api.svg)
+![](https://img.shields.io/github/stars/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/forks/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/issues/tangsan06/ControlePonto-Api.svg)
