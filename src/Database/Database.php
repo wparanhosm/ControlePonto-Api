@@ -8,21 +8,12 @@ class Database
     protected static $db;
 
     # PDO config vars
-    // private static $db_type = 'mysql';
-    // private static $db_hostname = 'localhost';
-    // private static $db_name = 'id16439865_projetopontodb';
-    // private static $db_user = 'id16439865_wmiranda';
-    // private static $db_password = 'Uni9@20218sem';
-    // private static $db_charset = 'utf8mb4';
-
-
     private static $db_type = 'mysql';
     private static $db_hostname = 'localhost';
     private static $db_name = 'projetopontodb';
     private static $db_user = 'root';
     private static $db_password = '';
     private static $db_charset = 'utf8mb4';
-
 
 
     # Constructor
