@@ -1,0 +1,198 @@
+{
+	"id": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+	"name": "WebApi - Projeto Ponto",
+	"description": "Tem como objetivo mapear os requests do sistema de ponto",
+	"order": [],
+	"folders": [
+		{
+			"name": "Users",
+			"description": "",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"order": [
+				"0e1f41b3-f40b-b1c0-3c51-b19c1be5f352",
+				"2ccb6d55-7f0b-f34f-0457-166f113d66bb",
+				"e17f7b3c-4d45-7fd8-0366-531ce6e867b9",
+				"9762278e-b85f-42ff-aa48-6ea5b8537d57",
+				"454f6268-cb46-e719-5509-f082a7b13c62"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "6e905e4e-6f36-c3a9-ef24-dedc35320065"
+		}
+	],
+	"folders_order": [
+		"6e905e4e-6f36-c3a9-ef24-dedc35320065"
+	],
+	"timestamp": 1619287791018,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0e1f41b3-f40b-b1c0-3c51-b19c1be5f352",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost/web-api-project/api/v1/user/search/index.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Login",
+			"description": "Envia informações de Login e senha; \nRetorna status 201 se o login e senha estiverem corretos;",
+			"descriptionFormat": "html",
+			"time": 1619287810152,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065",
+			"rawModeData": "{\n\t\"username\" : \"_tangsan\",\n\t\"password\" : \"leitecondensado\"\n}"
+		},
+		{
+			"id": "2ccb6d55-7f0b-f34f-0457-166f113d66bb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost/web-api-project/api/v1/user/new/index.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Adicionar novo usuário",
+			"description": "Método responsável por adicionar novo usuário no banco de dados; \nUtilizado principalmente para realizar o cadastro do cliente",
+			"descriptionFormat": "html",
+			"time": 1619394266854,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065",
+			"rawModeData": "{\n\t\"name\" : \"Paulinho\",\n\t\"email\" : \"paulinho@gmail.com\",\n\t\"username\" : \"_paulinhoGTA\",\n\t\"password\" : \"minecraft@2014\"\n}"
+		},
+		{
+			"id": "454f6268-cb46-e719-5509-f082a7b13c62",
+			"headers": "Authorization: Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost/web-api-project/api/v1/user/get/index.php?id=1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"data": null,
+			"dataMode": "params",
+			"name": "Busca usuário",
+			"description": "Busca um usuário específico pelo ID dele (necessita autorização)",
+			"descriptionFormat": "html",
+			"time": 1619398363785,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065"
+		},
+		{
+			"id": "9762278e-b85f-42ff-aa48-6ea5b8537d57",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost/web-api-project/api/v1/user/update-password/index.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Altera senha",
+			"description": "Método que altera a senha do usuário",
+			"descriptionFormat": "html",
+			"time": 1619395052331,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065",
+			"rawModeData": "{\n\t\"username\" : \"_paulinhoGTA\",\n\t\"password\" : \"minecraft@2015\",\n\t\"newPassword\": \"minecraft@2016\"\n}"
+		},
+		{
+			"id": "e17f7b3c-4d45-7fd8-0366-531ce6e867b9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost/web-api-project/api/v1/user/update/index.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Alterar informações",
+			"description": "Altera informações relacionadas ao usuário (endpoint não altera o username nem o password)",
+			"descriptionFormat": "html",
+			"time": 1619394572003,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065",
+			"rawModeData": "{\n\t\"name\" : \"Paulinho da Força\",\n\t\"email\" : \"paulinhoBonito@gmail.com\",\n\t\"username\" : \"_paulinhoGTA\",\n\t\"password\" : \"minecraft@2014\"\n}"
+		}
+	]
+}
