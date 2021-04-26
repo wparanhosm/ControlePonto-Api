@@ -6,7 +6,7 @@ O projeto consiste em uma aplicação de controle de ponto, onde o usuário, atr
 
 #### Definições
 
-#####Site
+##### Site
  Para o desenvolvimento do site, foi definido as seguintes tecnologias a serem trabalhadas:
  - HTML
  - CSS 
