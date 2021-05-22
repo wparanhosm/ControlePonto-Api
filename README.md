@@ -50,11 +50,16 @@ A solução mobile será desenvolvida em Flutter e contará com as seguintes fun
 
 
 ###### Deploy:
+- Site: Github pages 
+- Api: hospedagem gratuita no WebhostApp 
+- Mobile: Será gerado um apk apenas para a apresentação do projeto;
 
-  >Site: Github pages 
-  Api: hospedagem gratuita no WebhostApp 
-  Mobile: Será gerado um apk apenas para a apresentação do projeto;
 
+###### Baseada em: 
+```
+De Souza, Edson Melo (2021, March 13). Simple PHP API v.1.0.
+Available in: https://github.com/EdsonMSouza/simple-php-api
+```
 
 
 ![](https://img.shields.io/github/stars/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/forks/tangsan06/ControlePonto-Api.svg) ![](https://img.shields.io/github/issues/tangsan06/ControlePonto-Api.svg)
