@@ -5,6 +5,20 @@
 	"order": [],
 	"folders": [
 		{
+			"name": "Ponto",
+			"description": "Endpoins relacionados ao batimento do ponto",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"order": [
+				"85929127-2bd4-b51a-b83e-7347f27de24d",
+				"4ca9f8c5-4c72-1e25-4e65-c24ac217b364",
+				"1b0e8c9d-0c0e-ce5a-1eaf-c1c086b20cc6",
+				"1f050033-cf0a-120a-adc3-b8b06c8ddcee"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "facb3f2f-4cf8-247d-9c6d-e9c5634468d3"
+		},
+		{
 			"name": "Users",
 			"description": "",
 			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
@@ -21,7 +35,8 @@
 		}
 	],
 	"folders_order": [
-		"6e905e4e-6f36-c3a9-ef24-dedc35320065"
+		"6e905e4e-6f36-c3a9-ef24-dedc35320065",
+		"facb3f2f-4cf8-247d-9c6d-e9c5634468d3"
 	],
 	"timestamp": 1619287791018,
 	"owner": 0,
@@ -57,6 +72,76 @@
 			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
 			"responses": [],
 			"rawModeData": "{\n\t\"username\" : \"_tangsan\",\n\t\"password\" : \"leitecondensado\"\n}"
+		},
+		{
+			"id": "1b0e8c9d-0c0e-ce5a-1eaf-c1c086b20cc6",
+			"headers": "Authorization: Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://projetopontoapi.000webhostapp.com/api/v1/ponto/marcacaoManual/index.php",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623000719185,
+			"name": "Marcacao Manual",
+			"description": "Faz a marcação manual do ponto. \nParâmetros: \ndt_marcacao -> data de marcação do ponto\ntipo_marcacao -> ser a marcação é entrada ou saída\n\n\nErros: \nSe data de entrada for maior que a de saída\n\nObs: Se já houver uma data com o tipo de marcação no banco, o sistema vai apenas atualizar a data (então para atualizar um registro é apenas colocar uma data do dia que ele ja atualiza a nova data de entrada ou saída)",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"responses": [],
+			"rawModeData": "{\n\t\"dt_marcacao\":\"2021-06-06 13:25:00\",\n\t\"tipo_marcacao\": \"2\"\n}"
+		},
+		{
+			"id": "1f050033-cf0a-120a-adc3-b8b06c8ddcee",
+			"headers": "Authorization: Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://projetopontoapi.000webhostapp.com/api/v1/ponto/delete/index.php",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623000749757,
+			"name": "delete",
+			"description": "Deleta o registro de ponto atual",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"responses": [],
+			"rawModeData": "{\n\t\"id_ponto\": 3\n}"
 		},
 		{
 			"id": "2ccb6d55-7f0b-f34f-0457-166f113d66bb",
@@ -101,6 +186,7 @@
 				}
 			],
 			"url": "https://projetopontoapi.000webhostapp.com/api/v1/user/get/index.php?id=1",
+			"folder": "6e905e4e-6f36-c3a9-ef24-dedc35320065",
 			"queryParams": [
 				{
 					"key": "id",
@@ -122,6 +208,66 @@
 			"time": 1619473219868,
 			"name": "Busca usuário",
 			"description": "Busca um usuário específico pelo ID dele (necessita autorização)",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"responses": []
+		},
+		{
+			"id": "4ca9f8c5-4c72-1e25-4e65-c24ac217b364",
+			"headers": "Authorization: Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://projetopontoapi.000webhostapp.com/api/v1/ponto/marcacaoAutomatica/index.php",
+			"folder": "facb3f2f-4cf8-247d-9c6d-e9c5634468d3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1622999854680,
+			"name": "Marcação automática",
+			"description": "Faz marcação automática no sistema de ponto \n\n\nRetorno: Retorna o registro criado no banco\n\nExceções:\n\nMarcação ja feita: Se no mesmo dia já houver marcação de entrada e saída\n\nMarcação ímpar: Se existe uma marcação anterior que não contem entrada e saída",
+			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
+			"responses": []
+		},
+		{
+			"id": "85929127-2bd4-b51a-b83e-7347f27de24d",
+			"headers": "Authorization: Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer X3RhbmdzYW46MTYxOTM5NzUwNQ==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://projetopontoapi.000webhostapp.com/api/v1/ponto/getAll/index.php",
+			"folder": "facb3f2f-4cf8-247d-9c6d-e9c5634468d3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1622999849457,
+			"name": "GetAll",
+			"description": "Retorna os pontos que foram batidos pelo usuário\n\nParâmetros: \n\nAuthorization (Header) : Bearer {authToken};\n\n\n\nRetorno: \n\tLista de objetos de ponto, com id do ponto , data de marcação, tipo de marcação (1 - entrada e 2 - saída) e\n\tmarcação manual",
 			"collectionId": "a625a4fd-9f05-0563-c2d9-ec2e931bc204",
 			"responses": []
 		},
