@@ -79,6 +79,38 @@ class UserModel
         }
     }
 
+
+
+    function searchByToken( $token ) {
+        
+        date_default_timezone_set('America/Sao_Paulo');
+
+        $str = explode(" ",$token);
+        if(strtoupper($str[0]) == "BEARER"){
+            $token = $str[1];
+        }
+        
+        
+        
+        try {
+            $sql = 'SELECT users.id, users.name, users.email, users.authToken
+                    FROM users WHERE users.authToken = :token';
+
+            $stmt = self::$pdo->prepare( $sql );
+            $stmt->bindValue( ':token', $token, \PDO::PARAM_STR );
+            $stmt->execute();
+
+            if ( $stmt->rowCount() == 1 ) {
+                return $stmt->fetch( \PDO::FETCH_OBJ );
+            } else {
+                return ( bool ) FALSE;
+            }
+        } catch ( \PDOException $ex ) {
+            throw $ex;
+        }
+    }
+
+
     /**
     * Insert a new User
     */

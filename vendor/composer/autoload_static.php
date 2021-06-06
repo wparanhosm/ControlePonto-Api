@@ -6,7 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit67ba9c559bc894a354349544928e6e6b
 {
+    public static $files = array (
+        'f9e61f18f0291090ecf3f67a829046de' => __DIR__ . '/..' . '/athari/yalinqo/YaLinqo/Linq.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'Y' => 
+        array (
+            'YaLinqo\\' => 8,
+        ),
         'A' => 
         array (
             'Api\\' => 4,
@@ -14,6 +22,10 @@ class ComposerStaticInit67ba9c559bc894a354349544928e6e6b
     );
 
     public static $prefixDirsPsr4 = array (
+        'YaLinqo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/athari/yalinqo/YaLinqo',
+        ),
         'Api\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

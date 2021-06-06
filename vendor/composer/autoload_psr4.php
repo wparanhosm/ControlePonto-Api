@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'YaLinqo\\' => array($vendorDir . '/athari/yalinqo/YaLinqo'),
     'Api\\' => array($baseDir . '/src'),
 );

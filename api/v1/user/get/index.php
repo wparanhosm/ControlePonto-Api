@@ -11,11 +11,11 @@ try {
             $headers = apache_request_headers();
 
             # Verify Header Authorization Field
-            if ( !isset( $headers['Authorization'] ) ) {
-                echo json_encode( [ ['status' => '402', 'info' => 'Invalid or Missing Token'] ] );
+            // if ( !isset( $headers['Authorization'] ) ) {
+            //     echo json_encode( [ ['status' => '402', 'info' => 'Invalid or Missing Token'] ] );
 
-                die();
-            }
+            //     die();
+            // }
             
             if (count($_GET) != 1 ) {
                 echo json_encode( [ ['status' => '202', 'info' => 'Invalid Arguments Number (Expected Two)'] ] );
@@ -31,15 +31,15 @@ try {
         $user = new \Api\User\User();
         $userModel = new \Api\User\UserModel();
 
-        try {
-            if ( !$userModel->auth( $headers['Authorization'], $_GET['id'] ) ) {
-                echo json_encode( [ ['status' => '401', 'info' => 'Token Refused'] ] );
-                die;
-            }
-        } catch( \Exception $ex ) {
-            echo json_encode( [ ['status' => '407', 'info' => $ex->getMessage()] ] );
-            die;
-        }
+        // try {
+        //     if ( !$userModel->auth( $headers['Authorization'], $_GET['id'] ) ) {
+        //         echo json_encode( [ ['status' => '401', 'info' => 'Token Refused'] ] );
+        //         die;
+        //     }
+        // } catch( \Exception $ex ) {
+        //     echo json_encode( [ ['status' => '407', 'info' => $ex->getMessage()] ] );
+        //     die;
+        // }
 
 
         try {

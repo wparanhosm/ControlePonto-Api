@@ -1,4 +1,8 @@
 {
+    "require": {
+        "athari/yalinqo": "^2.0"
+    },
+
     "autoload": {
         "psr-4": {
             "Api\\": "src/"
