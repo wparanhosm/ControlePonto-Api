@@ -33,7 +33,8 @@ try {
             $search = $pontoModel->marcacaoAutomatica( $auth );
             echo json_encode( $search == 1 ? true : $search );
         } catch( \PDOException $e ) {
-            echo json_encode( [ ['status' => '405', 'info' => SQLMessage( $e->getCode() ) ] ] );
+            echo print_r($e);
+            //echo json_encode( [ ['status' => '405', 'info' => SQLMessage( $e->getCode() ) ] ] );
         }
 
     } else {

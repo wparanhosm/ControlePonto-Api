@@ -31,7 +31,8 @@ class PontoModel
 
         try {
             $sql = "select p.* from ponto p inner join users on users.id = p.id_usuario 
-            where users.authToken =:token";
+            where users.authToken =:token order by p.dt_marcacao
+ ";
 
             $stmt = self::$pdo->prepare( $sql );
             $stmt->bindValue(':token',$token);// \PDO::PARAM_STR );
@@ -213,7 +214,10 @@ class PontoModel
 
 
             //verificando se é a entrada
-            if($ponto->getTipo_marcacao() == 1){
+            if($ponto->getTipo_marcacao() == 1 &&
+             $registrosEntrada =  Enumerable::from($listaMarcacoes)
+                ->where('$prod ==> $prod->tipo_marcacao == 1')
+                ->count() > 0){
 
 
                 $entrada = Enumerable::from($listaMarcacoes)
@@ -242,6 +246,9 @@ class PontoModel
                     }
                 }
                 $ponto->setId_ponto($entrada->id_ponto);
+                
+                return $this->update($ponto);
+
             }
 
 
@@ -278,14 +285,14 @@ class PontoModel
                     }
 
                     $ponto->setId_ponto($saida->id_ponto);
+                    
+                    return $this->update($ponto);
+
 
                 } else {
                     return ["401" => "Não é possível adicionar uma saída sem um registro de entrada"];
                 }
             }
-        
-            return $this->update($ponto);
-
         } 
 
         return $this->insert($ponto);
@@ -327,7 +334,7 @@ class PontoModel
         try {
             self::$pdo->beginTransaction();
             
-            $sql = 'DELETE FROM PONTO
+            $sql = 'DELETE FROM ponto
                     WHERE ponto.id_ponto = :id_ponto';
 
             $stmt = self::$pdo->prepare( $sql );
@@ -366,6 +373,7 @@ class PontoModel
 
         } catch( \PDOException $ex ) {
             self::$pdo->rollback();
+            echo print_r($ex);
             throw $ex;
         }
     }
